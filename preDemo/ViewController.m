@@ -17,6 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    webview=[[UIWebView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    NSURLRequest *request=[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://beiweiqiang.github.io/welcome16autumn/"]];
+    [self.view addSubview:webview];
+    [webview loadRequest:request];
+//welcome url
+//https://beiweiqiang.github.io/welcome16autumn/
+    
 }
 
 - (void)didReceiveMemoryWarning {
